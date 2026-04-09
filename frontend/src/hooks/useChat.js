@@ -12,7 +12,6 @@ export function useChat(roomCodeProp) {
   const [userLeft, setUserLeft] = useState(false);
   const [error, setError] = useState(null);
   const [finalRoomCode, setFinalRoomCode] = useState(null);
-  const [userId] = useState(uuidv4());
 
   useEffect(() => {
     // Connect to backend

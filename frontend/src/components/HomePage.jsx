@@ -9,9 +9,7 @@ function HomePage({ onCreateRoom, onJoinRoom }) {
   const handleCreateRoom = async () => {
     setLoading(true);
     try {
-      // Aquí llamaremos al backend
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
-      // La lógica se gestiona en el hook useChat cuando se monta ChatRoom
+      // La lógica de crear sala se gestiona en el hook useChat al montar ChatRoom.
       onCreateRoom(null); // Pasamos null, la sala se crea en ChatRoom
     } catch (error) {
       console.error('Error creating room:', error);
